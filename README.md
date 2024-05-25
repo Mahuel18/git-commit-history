@@ -27,14 +27,14 @@ Navigate to the project directory:
 
 ## Install backend dependencies:
 
-cd back
-npm install
+- cd back
+- npm install
 
 
 ## Install frontend dependencies:
 
-cd ../frontend
-npm install
+- cd ../frontend
+- npm install
 
 
 
@@ -57,11 +57,11 @@ To run unit tests for the frontend:
 ## Running the Application
 Start the backend server:
 
-cd back
-npm start
+- cd back
+- npm start
 
 Start the frontend development server:
 
-cd frontend
-ng serve
-Open your browser and navigate to http://localhost:4200 to view the application.
+- cd frontend
+- ng serve
+- Open your browser and navigate to http://localhost:4200 to view the application.
