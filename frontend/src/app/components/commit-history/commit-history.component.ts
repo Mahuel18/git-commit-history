@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { GithubService } from '../../github.service';
 
 @Component({
@@ -6,15 +6,17 @@ import { GithubService } from '../../github.service';
   templateUrl: './commit-history.component.html',
   styleUrls: ['./commit-history.component.css']
 })
-export class CommitHistoryComponent {
-  owner: string = 'Mahuel18';
-  repo: string = 'git-commit-history';
-  commits: any[] = [];
-
+export class CommitHistoryComponent implements OnInit {
+  commits: any[]= [];
+  
   constructor(private githubService: GithubService) {}
 
+  ngOnInit() {
+    this.getCommits();
+  }
+
   getCommits() {
-    this.githubService.getCommits(this.owner, this.repo).subscribe(data => {
+    this.githubService.getCommits('Mahuel18', 'git-commit-history').subscribe(data => {
       this.commits = data;
     });
   }

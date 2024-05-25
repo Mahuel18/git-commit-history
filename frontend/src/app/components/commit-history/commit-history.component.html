@@ -1,12 +1,9 @@
-<div class="container mx-auto p-4">
-    <h1 class="text-2xl font-bold mb-4">Git Commit History</h1>
-    <form (submit)="getCommits()" class="mb-4">
-      <button type="button" (click)="getCommits()" class="bg-blue-500 text-white p-2">Get Commits</button>
-    </form>
-    <div *ngFor="let commit of commits" class="bg-white p-4 rounded shadow mb-4">
-      <p><strong>Commit:</strong> {{ commit.commit.message }}</p>
-      <p><strong>Author:</strong> {{ commit.commit.author.name }}</p>
-      <p><strong>Date:</strong> {{ commit.commit.author.date }}</p>
-    </div>
+<div class="container mx-auto p-4 flex flex-col items-center">
+  <h1 class="text-2xl font-bold mb-4">Git Commit History</h1>
+  <button type="button" (click)="getCommits()" class="bg-blue-500 text-white p-2 mb-4">Get Commits</button>
+  <div *ngFor="let commit of commits" class="bg-white p-4 rounded shadow mb-4">
+    <p><strong>Commit:</strong> {{ commit.commit.message }}</p>
+    <p><strong>Author:</strong> {{ commit.commit.author.name }}</p>
+    <p><strong>Date:</strong> {{ commit.commit.author.date }}</p>
   </div>
-  
+</div>
