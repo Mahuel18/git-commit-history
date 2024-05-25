@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { Injectable } from '@nestjs/common';
 import { HttpService } from '@nestjs/axios';
 import { AxiosResponse } from 'axios';
